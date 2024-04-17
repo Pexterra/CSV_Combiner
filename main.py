@@ -48,7 +48,7 @@ class CSVCombiner(QObject):
         big_df = pd.concat(df_list, ignore_index=True)
         
         # Save the final result to a new CSV file
-        output = os.path.join(folder_path, 'combined_file.csv')
+        output = os.path.join(folder_path, '_combined_file.csv')
         big_df.to_csv(output, index=False, sep=';')
         return f'Saved combined csv to: {output}'
 
